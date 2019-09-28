@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// IMPORT GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// FONTS
+$family-sans-serif: 'Nunito', sans-serif;
+
+// COLORS
+$primary: #00d1b2;
+$info: #209CEE;
+$success: #23D160;
+$warning: #FFDD57;
+$danger: #FF3860;
+$light: #F5F5F5;
+$dark: #363636;
+
+// TEXT
+$text: #4A4A4A;
+$link: #3273DC;
+$body-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  "Helvetica", "Arial", sans-serif;
+$title-family: false;
+$button-family: false;
+
+// BREAKPOINTS
+$gap: 32px;
+$tablet: 769px;
+$desktop: 960px + (2 * $gap);
+$widescreen: 1152px + (2 * $gap);
+$fullhd: 1344px + (2 * $gap);
+$widescreen-enabled: true;
+$fullhd-enabled: false;
+
+// LAYOUT
+$section-padding: 3rem 1.5rem;
+$section-padding-medium: 6rem 1.5rem;
+$section-padding-large: 9rem 1.5rem;
+
+// UPDATE SOME OF BULMA'S COMPONENT VARIABLES
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+// IMPORT ALL CSS FROM BULMA
+@import "~bulma/bulma.sass";
+
+// IMPORT ONLY WHAT NEED FROM BULMA
+// @import '../node_modules/bulma/sass/utilities/_all.sass';
+// @import '../node_modules/bulma/sass/base/_all.sass';
+// @import '../node_modules/bulma/sass/elements/button.sass';
+// @import '../node_modules/bulma/sass/elements/container.sass';
+// @import '../node_modules/bulma/sass/elements/form.sass';
+// @import '../node_modules/bulma/sass/elements/title.sass';
+// @import '../node_modules/bulma/sass/components/navbar.sass';
+// @import '../node_modules/bulma/sass/layout/hero.sass';
+// @import '../node_modules/bulma/sass/layout/section.sass';
