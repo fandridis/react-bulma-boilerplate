@@ -11,6 +11,7 @@
     "semi": 1,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "jsx-a11y/anchor-is-valid": "off",
+    "react/forbid-prop-types": 0,
     "prettier/prettier": [
       "error",
       {

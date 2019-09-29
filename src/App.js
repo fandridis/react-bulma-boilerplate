@@ -1,40 +1,32 @@
-import React from 'react';
-import './App.scss';
+import React, { useContext, useEffect } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './website/Home/Home';
+import About from './website/About/About';
+import Products from './website/Products/Products';
+import Locations from './website/Locations/Locations';
+import Contact from './website/Contact/Contact';
+import { StoreContext } from './context/StoreContext';
 
 function App() {
+  const { state } = useContext(StoreContext);
+  // const { state, dispatch, actions } = useContext(StoreContext);
+
+  useEffect(() => {
+    // actions.login();
+  }, []);
+
   return (
-    <div className="App">
-      <h1 className="title">Bulma</h1>
-      <p className="subtitle">
-        Modern CSS framework based on{' '}
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">
-          Flexbox
-        </a>
-      </p>
-
-      <div className="field">
-        <div className="control">
-          <input className="input" type="text" placeholder="Input" />
-        </div>
+    <Router>
+      <div>
+        <Navbar isAuth={state.isAuth} />
+        <Route exact path="/" component={Home} />
+        <Route path="/products" component={Products} />
+        <Route path="/locations" component={Locations} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
       </div>
-
-      <div className="field">
-        <p className="control">
-          <span className="select">
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
-          </span>
-        </p>
-      </div>
-
-      <div className="buttons">
-        <a className="button is-primary">Primary</a>
-        <a className="button is-link">Link</a>
-      </div>
-    </div>
+    </Router>
   );
 }
 
