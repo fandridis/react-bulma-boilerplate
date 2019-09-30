@@ -4,7 +4,7 @@ import './Home.scss';
 function Home() {
   return (
     <>
-      <section className="hero has-background-info is-fullheight">
+      <section className="hero has-background-info is-fullheight-with-navbar">
         <div className="hero-body">
           <div className="container">
             <h1 className="title has-text-centered">Hero Image goes here</h1>
